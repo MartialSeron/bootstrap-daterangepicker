@@ -83,6 +83,12 @@
 
               <div class="checkbox">
                 <label>
+                  <input type="checkbox" id="showISOWeekNumbers"> showISOWeekNumbers
+                </label>
+              </div>
+
+              <div class="checkbox">
+                <label>
                   <input type="checkbox" id="timePicker"> timePicker
                 </label>
               </div>
@@ -131,6 +137,12 @@
               <div class="checkbox">
                 <label>
                   <input type="checkbox" id="autoUpdateInput" checked="checked"> autoUpdateInput
+                </label>
+              </div>
+
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="alwaysShowCalendars"> alwaysShowCalendars
                 </label>
               </div>
 
@@ -242,6 +254,9 @@
           if ($('#showWeekNumbers').is(':checked'))
             options.showWeekNumbers = true;
 
+          if ($('#showISOWeekNumbers').is(':checked'))
+            options.showISOWeekNumbers = true;
+
           if ($('#timePicker').is(':checked'))
             options.timePicker = true;
           
@@ -291,6 +306,9 @@
 
           if (!$('#autoUpdateInput').is(':checked'))
             options.autoUpdateInput = false;
+
+          if ($('#alwaysShowCalendars').is(':checked'))
+            options.alwaysShowCalendars = true;
 
           if ($('#parentEl').val().length)
             options.parentEl = $('#parentEl').val();
